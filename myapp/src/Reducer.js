@@ -7,11 +7,10 @@ const initialState = {
 export const customReducer = createReducer(initialState, (builder) => {
     builder
         .addCase('increment',(state)=>{
-            state+=1;
+            state.c+=1;
         })
         .addCase('incrementByValue',(state,action)=>{
-            state.c+=1;
-            state.c = action.payload;
+            state.c += action.payload;
         })
         .addCase('decrement',(state)=>{
             state.c-=1;
